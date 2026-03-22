@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cloud>
+    <service>
+        <name>Compute Cloud</name>
+        <description>Виртуальные машины и контейнеры</description>
+    </service>
+    <service>
+        <name>Storage</name>
+        <description>Хранение данных</description>
+    </service>
+    <service>
+        <name>Database Services</name>
+        <description>Управляемые базы данных</description>
+    </service>
+    <service>
+        <name>Big Data</name>
+        <description>Аналитика больших данных</description>
+    </service>
+    <service>
+        <name>Networking</name>
+        <description>Сетевые решения</description>
+    </service>
+    <service>
+        <name>Security</name>
+        <description>Защита данных</description>
+    </service>
+</cloud>
