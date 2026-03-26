@@ -2,12 +2,14 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
+// Загружаем XML
 $xml = simplexml_load_file("books.xml");
 
 if ($xml === false) {
     die("Ошибка загрузки XML файла");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -15,7 +17,7 @@ if ($xml === false) {
     <title>Каталог книг</title>
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+    <script>
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
             m[i].l=1*new Date();
@@ -33,10 +35,14 @@ if ($xml === false) {
         });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/108255752" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div>
+            <img src="https://mc.yandex.ru/watch/108255752" style="position:absolute; left:-9999px;" alt="" />
+        </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+
 </head>
+
 <body>
 
 <h1>Каталог книг</h1>
@@ -57,6 +63,7 @@ if ($xml === false) {
         <td><?= htmlspecialchars((string)$book->price) ?></td>
     </tr>
     <?php endforeach; ?>
+
 </table>
 
 </body>
